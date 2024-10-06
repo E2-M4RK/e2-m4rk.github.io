@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Portfolio</title>
+    <style>
+        /* Background Image and Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url('Imgae/black backk.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border-top: 50px solid yellow; /* Add a yellow border to the top */
+        }
+
+        /* Nickname Styling */
+        .nickname {
+            position: absolute;
+            top: 4px;
+            left: 15px;
+            padding: 5px 10px;
+            border: 3px solid rgb(0, 0, 0); /* Visible and thicker border */
+            font-size: 16px;
+            font-weight: bold;
+            background-color: yellow;
+            color: rgb(0, 0, 0);
+            border-radius: 70%; /* Circular border */
+            text-align: center;
+            width: 20px; /* Adjust width */
+            height: 25px; /* Adjust height to ensure circular shape */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Header Styling */
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: yellow;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        /* Styled div for description */
+        .description-container {
+            margin-top: 20px;
+            padding: 15px;
+            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-top: 5px solid yellow;
+            border-radius: 8px;
+            text-shadow: 1px 1px 3px black;
+        }
+
+        h6 {
+            font-size: 14px;
+            color: white;
+            text-align: justify;
+        }
+
+        /* Project Button Styling */
+        .projects {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .projects button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 2px solid yellow;
+            background-color: black;
+            color: yellow;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .projects button:hover {
+            transform: translateY(-5px);
+            background-color: yellow;
+            color: black;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            h6 {
+                font-size: 12px;
+            }
+
+            .projects button {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Nickname in top-left -->
+    <div class="nickname">MJ</div>
+
+    <!-- Header -->
+    <h1>Welcome to My Portfolio</h1>
+
+    <!-- Description with a styled div -->
+    <div class="description-container">
+        <h6>This is a sample minimalist website where I can put all of my projects in Web Development.</h6>
+    </div>
+
+    <!-- Project Buttons -->
+    <div class="projects">
+        <a href="activity4.html"><button>Project 1</button></a>
+        <a href="Activity 5/home.html"><button>Project 2</button></a>
+        <button>Project 3</button>
+        <button>Project 4</button>
+        <button>Project 5</button>
+    </div>
+
+</body>
+</html>
