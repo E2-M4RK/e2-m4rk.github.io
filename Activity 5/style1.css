@@ -1,0 +1,37 @@
+
+body {
+    background-color: #f9f6f2;
+}
+
+.card-img-top {
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-footer {
+    border-top: none;
+    padding-top: 10px;
+}
+
+.text-muted {
+    display: flex;
+    align-items: center;
+}
+
+.bi-geo-alt {
+    margin-right: 5px;
+}
