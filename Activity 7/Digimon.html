@@ -83,10 +83,10 @@
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
     }
 
-    .navbar-center {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+ 
+    .navbar .d-flex {
+    width: 100%;
+    justify-content: center;
     }
 
     .navbar-brand img {
@@ -165,6 +165,7 @@
       padding: 10px 0;
       font-size: 16px;
     }
+   
   </style>
 
 </head>
@@ -185,7 +186,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
-          <form class="d-flex navbar-center" role="search" onsubmit="event.preventDefault(); searchDigimon();">
+          <form class="d-flex mx-lg-auto mb-2 mb-lg-0" role="search" onsubmit="event.preventDefault(); searchDigimon();">
             <input id="searchTerm" class="form-control me-2" type="search" placeholder="Search Digimon by ID or name"
               aria-label="Search" style="width: 300px;">
             <button class="btn btn-outline-success" type="submit">Search</button>
