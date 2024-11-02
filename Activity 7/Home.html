@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Digital World Themed Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="ImagesDgm/icon.png" />
+
+    <style>
+        body {
+            background: url('ImageHome/background.jpg');
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .navbar-brand img {
+            width: 200px;
+            max-height: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-link {
+            padding: 10px 20px;
+            color: #ffffff;
+            background-color: #f39c12;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #e67e22;
+            color: #ffffff;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-item img,
+        .video-embed {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .highlight-text {
+            color: #443c70;
+            font-size: 15px;
+        }
+
+        .video-section {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            background-color: #232323;
+            border: 4px solid #FFD700;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        .imgcontainer {
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .imgcontainer img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 16px rgba(255, 215, 0, 0.8);
+        }
+
+        .digimonname h5,
+        .digimonlevel h6 {
+            position: absolute;
+            width: 100%;
+            background-color: #333;
+            padding: 8px 0;
+            text-align: center;
+            margin: 0;
+        }
+
+        .digimonname h5 {
+            font-weight: bold;
+            bottom: 30px;
+            color: #fbf39b;
+        }
+
+        .digimonlevel h6 {
+            bottom: 0;
+            font-style: italic;
+            color: #ffffff;
+        }
+
+        .footer-container {
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .main-footer {
+            background-color: #000;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-text {
+            text-align: center;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .footer-social a img {
+            margin: 0 10px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-bottom {
+            background-color: #f1ba63;
+            color: #000000;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="https://digimon.net/reference_en/" target="_blank">
+                <img src="ImagesDgm/Digimon-logo.png" alt="Logo">
+            </a>
+            <div class="navbar-text mx-auto text-white">
+                <h2 class="mb-2 text-center">Unleash Your Digimon Adventure!</h2>
+            </div>
+            <a href="Digimon.html" class="nav-link text-white">Check Heroes</a>
+        </div>
+    </nav>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide wow animate__animated animate__fadeInUp"
+        data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="ImageHome/caro 1.jpg" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="ImageHome/caro 2.jpeg" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="ImageHome/caro 3.jpg" alt="Slide 3">
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section my-5 text-center wow animate__animated animate__slideInUp" data-wow-delay="0.6s">
+        <h2 class="mb-4 text-center">Welcome to the Digimon World</h2>
+        <p style="text-align: justify;">Welcome to Digimon Adventure, the ultimate hub for all things Digimon! Dive into
+            a vibrant community of fans where you can explore detailed Heroes profiles, short videos, and a bit of Wiki.
+            Stay updated with the latest news, fan art, and discussions. Whether you're a seasoned trainer or new to the
+            Digital World, there's something here for everyone. Join us and unleash your Digi-spirits!</p>
+        <p style="text-align: justify;">Immerse yourself in the Digital World by watching classic episodes and exploring
+            the latest series. Discover a variety of thrilling Digimon games, from RPGs to card battles, and unleash
+            your strategic skills. Support the franchise by browsing our curated selection of merchandise and exclusive
+            deals. Join our community of passionate fans and experience the adventure like never before. Dive in today
+            and let the Digi-spirit guide you!</p>
+        <p class="highlight-text">Play our Game on: PlayStation®4, Nintendo Switch™, PC</p>
+        <p class="highlight-text">Watch our episode on: YouTube, IQIYI, Crunchyroll</p>
+    </div>
+
+    <div class="video-section my-4 wow animate__animated animate__zoomInUp" data-wow-delay="0.5s">
+        <iframe class="video-embed" src="https://www.youtube.com/embed/UWZU3jMA9xc" allowfullscreen></iframe>
+    </div>
+
+    <div class="content-section text-center my-5 wow animate__animated animate__rotateInDownRight" data-wow-delay="1s">
+        <h1 class="mb-4">Heroes Gallery</h1>
+        <p>Discover the legendary Digimon heroes and their levels and attributes.</p>
+        <a href="Digimon.html" class="btn btn-primary">Explore Heroes List</a>
+    </div>
+
+    <div class="container mt-3">
+        <div id="cardContainer" class="row mt-3"></div>
+    </div>
+
+    <div class="footer-container">
+        <footer class="main-footer">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="ImagesDgm/Digimon-logo.png" alt="Logo" width="120">
+                </div>
+                <div class="footer-text">
+                    <p>Thank you for visiting my Digimon API! I appreciate your time and interest. Feel free to explore
+                        and enjoy discovering the world of Digimon!</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://x.com/digimon_games?lang=en"><img src="ImagesDgm/twitter.png" alt="Twitter" width="24"></a>
+                    <a href="https://www.instagram.com/digimonanimeofficial/?hl=en"><img src="ImagesDgm/instagram.png" alt="Instagram" width="24"></a>
+                    <a href="https://www.facebook.com/DigimonOfficial/"><img src="ImagesDgm/facebook.png" alt="Facebook" width="24"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>This website is for educational purposes only</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+
+        var cardContainer = document.getElementById("cardContainer");
+
+        const loadDigimon = async () => {
+            const response = await fetch('https://digimon-api.vercel.app/api/digimon');
+            const digimons = await response.json();
+
+            for (var i = 0; i < 9 && i < digimons.length; i++) {
+                var digimon = digimons[i];
+
+
+                cardContainer.innerHTML += `
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 wow animate__animated animate__slideInUp" data-wow-delay="2s">
+                    <a href="view.html?digimonName=` + digimon.name + `">
+                        <div class="card rounded-5 my-3">
+                            <div class="imgcontainer">
+                                <img src="` + digimon.img + `" alt="` + digimon.name + `">
+                            </div>
+                           <div class="digimonname">
+                                <h5>` + digimon.name + `</h5>
+                            </div>
+                            <div class="digimonlevel">
+                                <h6>` + digimon.level + `</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            `;
+            }
+            new WOW().init();
+        };
+
+        loadDigimon();
+    </script>
+
+</body>
+
+</html>
