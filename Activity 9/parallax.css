@@ -1,0 +1,75 @@
+/* PARALLAX.CSS */
+/*CSS created by Christopher Jay De Claro*/
+/*github.com/cjdeclaro*/
+
+/*Key Art default settings*/
+
+.keyart,
+.keyart_layer {
+	height: 1000px;
+}
+
+.keyart {
+	position: relative;
+	z-index: 10;
+}
+
+.keyart_layer {
+	background-position: bottom center;
+	background-size: auto 1038px;
+	background-repeat: repeat-x;
+	width: 100%;
+	position: absolute;
+}
+
+.keyart_layer.parallax {
+	position: fixed;
+}
+
+.main-content {
+	width: 100%;
+	position: absolute;
+	z-index: 200;
+}
+
+/*ADD OR REMOVE LAYERS AS NEEDED*/
+
+#keyart-0 {
+	background-image: url(img/p0.png);
+}
+
+#keyart-1 {
+	background-image: url(img/p1.png);
+}
+
+#keyart-2 {
+	background-image: url(img/p2.png);
+}
+
+#keyart-3 {
+	background-image: url(img/p3.png);
+}
+
+#keyart-4 {
+	background-image: url(img/p4.png);
+}
+
+#keyart-5 {
+	background-image: url(img/p5.png);
+}
+
+#keyart-6 {
+	background-image: url(img/p6.png);
+}
+
+#keyart-7 {
+	background-image: url(img/p7.png);
+}
+
+#keyart-8 {
+	background-image: url(img/p8.png);
+}
+
+#keyart-scrim {
+	opacity: 0;
+}

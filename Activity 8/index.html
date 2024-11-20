@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DR STONE ANIME</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="icon" type="image/x-icon" href="assets/Stone.png" />
+    <style>
+        .navbar {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .nav-link,
+        .social-icons a {
+            color: white;
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        .nav-link:hover,
+        .social-icons a:hover {
+            color: #ccc;
+        }
+
+        .social-icons a {
+            margin-right: 15px;
+        }
+
+        .fullscreen-video {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .fullscreen-video iframe {
+            pointer-events: none;
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4000px;
+            height: 100%;
+        }
+
+        .about-section {
+            background-color: black;
+            color: #ddd;
+            padding: 60px 0px;
+        }
+
+        .about-section h2 {
+            font-weight: bold;
+            font-size: 32px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            line-height: 26px;
+            color: #ddd;
+            text-align: justify;
+        }
+
+        .about-video iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 8px;
+        }
+
+        .news-section {
+            background-color: #f8f9fa;
+            border-top: 1px solid #ddd;
+        }
+
+        .news-section h2 {
+            color: #343a40;
+            font-weight: bold;
+            font-size: 32px;
+        }
+
+        .news-section p {
+            font-size: 16px;
+            color: #555;
+            line-height: 26px;
+        }
+
+        .news-section .btn {
+            background-color: #007bff;
+            border-color: #007bff;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .news-section .btn:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+
+        .youtube-section {
+            background-color: black;
+            color: white;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            border-top: 1px solid #ffffff;
+        }
+
+        footer p {
+            margin: 0px;
+            color: #aaa;
+            text-align: justify;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="assets/Stone.png" alt="Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about-section">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#news-section">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#youtube-section">YouTube</a></li>
+                </ul>
+                <div class="social-icons d-flex">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Embeded Background -->
+    <div class="fullscreen-video">
+        <iframe src="https://www.youtube.com/embed/tF4faMbs5oQ?autoplay=1&mute=1&controls=0&rel=0&disablekb=1&loop=1"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </div>
+    <!-- About -->
+    <section class="about-section" id="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="about-video">
+                        <iframe src="https://www.youtube.com/embed/81H41vp96ag?si=KBcBLi6_TQnX3Ezt"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2>ABOUT</h2>
+                    <p>Several thousand years after a mysterious phenomenon that turns all of humanity to stone, the
+                        extraordinarily intelligent, science-driven boy, Senku Ishigami, awakens.</p>
+                    <p>Facing a world of stone and the total collapse of civilization, Senku makes up his mind to use
+                        science to rebuild the world. Starting with his super strong childhood friend Taiju Oki, who
+                        awakened at the same time, they will begin to rebuild civilization from nothing...</p>
+                    <p>Depicting two million years of scientific history from the Stone Age to present day, the
+                        unprecedented crafting adventure story is about to begin!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- news -->
+    <section class="news-section py-5" id="news-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="assets/stone dr.jpg" class="img-fluid rounded" alt="Dr. Stone News Image">
+                </div>
+                <div class="col-md-8">
+                    <h2 class="mb-3">Dr. Stone: Science Future Announces New Cast</h2>
+                    <p>
+                        The final season of the hit anime, "Dr. Stone: Science Future", is set to premiere in January
+                        2025.
+                        The season will introduce new characters, Dr. Xeno and Stanley Snyder, voiced by Kenji Nojima
+                        and
+                        Kōji Yusa, respectively. These characters promise to make the last arc of the show more intense
+                        and intriguing.
+                    </p>
+                    <p>
+                        The first season will debut at CCXP (Comic Con Experience) in Sao Paulo, Brazil, from December
+                        5–8,
+                        2024. Crunchyroll will stream the show globally, ensuring fans worldwide can witness the
+                        thrilling
+                        conclusion to Senku’s scientific journey.
+                    </p>
+                    <p>
+                        A one-off anime episode, (Dr. Stone: Ryusui), further expanded the lore and world-building of
+                        the
+                        'Dr. Stone' universe. The third season, 'Dr. Stone: New World', premiered in April 2023 and
+                        concluded
+                        its first cour after 11 episodes. The second cour aired in October 2023, with the series
+                        officially
+                        debuting in December 2023.
+                    </p>
+                    <p>
+                        (Dr. Stone) manga, a collaborative creation by Riichirou Inagaki and Boichi, gained immense
+                        popularity
+                        during its run in 'Weekly Shonen Jump' until its conclusion in March 2022. It was translated
+                        into English
+                        by Viz Media and distributed digitally on MANGA Plus.
+                    </p>
+                    <p>
+                        As the anime enters its final season, fans eagerly anticipate how 'Dr. Stone' will conclude its
+                        epic
+                        tale of scientific discovery, survival, and human creativity.
+                    </p>
+                    <a href="https://comicbook.com/anime/news/dr-stone-final-season-new-trailer-watch/" target="_blank"
+                        class="btn btn-primary mt-3">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Youtube Gallery -->
+    <section class="youtube-section py-5" id="youtube-section">
+        <div class="container">
+            <h2 class="mb-4 text-center">DR STONE - Trailer</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4 video-item animate__animated animate__slideInLeft animate__delay-1s">
+                    <div class="ratio ratio-16x9">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/S6OmSIxSj14?si=4w7DvrIEmb70IxNH"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="mt-2 text-center">TVアニメ「Dr.STONE」ティーザPV第1弾</p>
+                </div>
+                <div class="col-md-4 mb-4 video-item animate__animated animate__slideInRight animate__delay-1s">
+                    <div class="ratio ratio-16x9">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/DnGov2LG1os?si=p7VzzVKQdQobNXe1"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="mt-2 text-center">TVアニメ「Dr.STONE」ティーザPV第2弾</p>
+                </div>
+                <div class="col-md-4 mb-4 video-item animate__animated animate__flipInX animate__delay-1s">
+                    <div class="ratio ratio-16x9">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/MODcfgRmcZk?si=k1hOs9PRh-J6GYiW"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="mt-2 text-center">TVアニメ「Dr.STONE」ティーザPV第3弾</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4 video-item animate__animated animate__slideInLeft animate__delay-1s">
+                    <div class="ratio ratio-16x9">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/QxjdhO_cwTA?si=gP8XD8lhJnhE3t8i"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="mt-2 text-center">TVアニメ「Dr.STONE」本PV第2弾</p>
+                </div>
+                <div class="col-md-4 mb-4 video-item animate__animated animate__flipInX animate__delay-1s">
+                    <div class="ratio ratio-16x9">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/ZCkPftkghvg?si=3e7bcsURmv3LCLfd"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="mt-2 text-center">TVアニメ「Dr.STONE」本PV第3弾</p>
+                </div>
+                <div class="col-md-4 mb-4 video-item animate__animated animate__slideInRight animate__delay-1s">
+                    <div class="ratio ratio-16x9">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/SohCAjC-Npk?si=xn5y3avej393-AN4"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <p class="mt-2 text-center">TVアニメ「Dr.STONE」第2期ティーザPV</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adding space -->
+    <div class="space" style="height: 200px; background-color: black;"></div>
+
+    <!-- footer -->
+    <footer class="py-3" style="background-color: black; color: white; margin: 0; padding: 20px 0; width: 100%;">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <p class="text-center m-0">
+                This website is created for educational purposes only and is dedicated to showcasing content related to
+                the <em>Dr. Stone</em> anime series.
+            </p>
+        </ul>
+        <p class="text-center m-0">© 2024 BSIT 3-1, PUP</p>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
