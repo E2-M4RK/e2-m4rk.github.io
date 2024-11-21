@@ -374,9 +374,14 @@ body {
 }
 
 #projects-section {
-    padding: 60px 20px;
-    width: 100%;
-    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#projects-section .row {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .project-title {
@@ -385,6 +390,7 @@ body {
     color: #f1b606;
     text-transform: uppercase;
     margin-bottom: 24px;
+    text-align: center;
 }
 
 .project-card {
@@ -394,7 +400,10 @@ body {
     background: transparent;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-    margin: 15px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
 }
 
 .project-card img {
@@ -439,7 +448,8 @@ body {
 .project-btn {
     display: block;
     width: calc(100% - 30px);
-    margin: 0 auto;
+    margin: 10px;
+    ;
     padding: 10px 15px;
     background: #f1b606;
     border: none;
@@ -479,6 +489,7 @@ body {
 .project-btn:hover::after {
     opacity: 1;
 }
+
 
 #loading-screen {
     position: fixed;
