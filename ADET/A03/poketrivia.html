@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéTriv</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/img/pokeicon.png" />
+
+    <style>
+        body {
+            background: url('assets/img/bg-1.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .card-text {
+            color: #b3b3b3;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .header-text {
+            color: #9e9e9e;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .type-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            color: #fff;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .type-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 56%;
+            border-radius: 14px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 14px;
+        }
+
+        .pokemon {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .pokemon .img-container {
+            width: 220px;
+            height: 220px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pokemon .img-container img {
+            width: 100%;
+            height: auto;
+            max-height: 220px;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.4));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .pokemon .name {
+            font-size: 30px;
+            font-weight: 700;
+            padding-top: 42px;
+            margin: 15px 0 7px;
+            letter-spacing: 1px;
+        }
+
+        .pokemon-types {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .card-poke {
+            background: linear-gradient(145deg, #1e1e1e 0%, #151515 100%);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card-poke:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        @keyframes floatPokemon {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: transparent; padding: 16px 0;">
+        <div class="container">
+            <a class="navbar-brand"
+                style="color: #fff; font-weight: 700; font-size: 24px; letter-spacing: 2px; background: linear-gradient(90deg, #ff9966, #ff5e62, #5ec25e, #2fbda1, #4fc3dc);  background-clip: text; color: transparent; text-shadow: 0 0 10px rgba(255,255,255,0.1);"
+                href="poketrivia.html">PokéTrivia</a>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex">
+                    <a class="nav-link px-2" href="index.html"
+                        style="color: rgba(255, 255, 255, 0.8); font-size: 24px;">
+                        <i class="bi bi-house-door-fill"></i>
+                    </a>
+                    <a class="nav-link px-2" href="poketrivia.html"
+                        style="color: rgba(255, 255, 255, 0.8); font-size: 24px;">
+                        <i class="bi bi-globe"></i>
+                    </a>
+                    <a class="nav-link px-2" href="https://github.com/E2-M4RK/e2-m4rk.github.io" target="_blank"
+                        style="color: rgba(255, 255, 255, 0.8); font-size: 24px;">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+            </div>
+    </nav>
+    <div class="container">
+        <div class="d-flex justify-content-center align-items-center flex-wrap gap-5 my-5">
+
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" class="img-fluid"
+                style="width: 200px; height: 200px; filter: drop-shadow(0 0 10px rgba(0,200,100,0.5)); animation: floatPokemon 4s ease-in-out infinite;">
+
+
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" class="img-fluid"
+                style="width: 200px; height: 200px; filter: drop-shadow(0 0 10px rgba(255,120,0,0.5)); animation: floatPokemon 4s ease-in-out infinite;">
+
+
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" class="img-fluid"
+                style="width: 200px; height: 200px; filter: drop-shadow(0 0 10px rgba(255,255,0,0.5)); animation: floatPokemon 4s ease-in-out infinite;">
+
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" class="img-fluid"
+                style="width: 200px; height: 200px; filter: drop-shadow(0 0 10px rgba(0,150,255,0.5)); animation: floatPokemon 4s ease-in-out infinite;">
+
+
+            <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png" class="img-fluid"
+                style="width: 200px; height: 200px; filter: drop-shadow(0 0 10px rgba(139,69,19,0.5)); animation: floatPokemon 4s ease-in-out infinite;">
+        </div>
+
+        <h1 class="fw-bold text-center my-4 display-4 display-md-3 display-lg-1" style="letter-spacing: 5px; background: linear-gradient(90deg, #ff9966, #ff5e62, #5ec25e, #2fbda1, #4fc3dc);
+        background-clip: text; color: transparent; text-shadow: 0 0 10px rgba(255,255,255,0.1);">
+            Welcome to PokéTrivia!
+        </h1>
+
+        <h2 class="fw-bold fs-1 text-white mb-3 text-center">All trainers welcome</h2>
+
+        <p class="text-white-50 mx-auto fs-5 text-center text-md-center px-3 px-md-0"
+            style="max-width: 800px; line-height: 1.6; text-align: justify;">
+            Whether you're a longtime fan or someone who's just starting to explore, PokéTrivia is your gateway to the
+            incredible universe of Pokémon. Learn what makes this world so iconic from powerful evolutions and legendary
+            creatures to the stories of friendship and discovery that have touched hearts for generations.
+        </p>
+    </div>
+
+
+    <div class="container">
+        <div class="text-center mb-4">
+            <a href="pokegal.html">
+                <button class="btn btn-danger rounded-pill px-4 py-2 mb-3 fw-bold"
+                    style="background: linear-gradient(90deg, #e3350d 0%, #ff5722 50%, #e3350d 100%); letter-spacing: 5px; box-shadow: 0 4px 15px rgba(227, 53, 13, 0.4);">Pokégallery
+                    List</button></a>
+            <p class="header-text">JOURNEY THROUGH THE WONDERFUL WORLD OF POKÉMON</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-7 mb-4">
+                <div class="card-poke">
+                    <div class="position-relative z-1 p-0 h-100">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/6xKWiCMKKJg?loop=1&autoplay=1&mute=1"
+                                title="Pokémon Season 1: Indigo League - Opening Theme" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5 mb-4">
+                <div class="row h-100">
+                    <div class="col-12 mb-4">
+                        <div class="card-poke">
+                            <div class="rounded-top p-3 d-flex align-items-center justify-content-center position-relative"
+                                style="background: linear-gradient(90deg, #151515, #252525);">
+                                <h3 class="mb-0 fs-5 fw-bold text-uppercase letter-spacing-2 text-white">Featured
+                                    Pokémon</h3>
+                            </div>
+                            <div class="p-3">
+                                <div id="pokemonCarousel" class="carousel slide" data-bs-ride="carousel"
+                                    data-bs-interval="3000">
+                                    <div class="carousel-inner" id="carouselInner">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card-poke">
+                            <div class="p-3">
+                                <div class="fw-bold" style="font-size: 58px; color: #00c853; line-height: 1;">18</div>
+                                <h3 class="fw-bold mb-3 letter-spacing-1">Elemental Types</h3>
+                                <p class="text-uppercase letter-spacing-2 text-secondary position-relative ps-3 mb-3 fs-6"
+                                    style="color: #999;">
+                                    <span class="position-absolute start-0 top-50 translate-middle-y rounded-circle"
+                                        style="width: 8px; height: 8px; background: #ff3d00;"></span>
+                                    Discover all elements
+                                </p>
+                                <div class="pokemon-types mt-3" id="pokemonTypes">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card-poke">
+                    <div class="p-3">
+                        <div class="text-primary fs-1 fw-bold" style="font-size: 3.5rem !important; line-height: 1;">898
+                        </div>
+                        <h3 class="fw-bold mb-3 letter-spacing-1">Species Discovered</h3>
+                        <p class="card-text">From Kanto to modern regions, the Pokémon world continues to grow</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card-poke">
+                    <div class="p-3">
+                        <h3 class="fw-bold mb-3 letter-spacing-1">Pokédex Insights</h3>
+                        <p class="text-uppercase letter-spacing-2 text-secondary position-relative ps-3 mb-3 fs-6"
+                            style="color: #999;">
+                            <span class="position-absolute start-0 top-50 translate-middle-y rounded-circle"
+                                style="width: 8px; height: 8px; background: #ff3d00;"></span>
+                            Did you know?
+                        </p>
+                        <p class="card-text">Eevee has the most evolutionary forms of any Pokémon, with eight different
+                            "Eeveelutions" discovered so far!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card-poke">
+                    <div class="p-3">
+                        <h3 class="fw-bold mb-3 letter-spacing-1">Legendary Heritage</h3>
+                        <p class="text-uppercase letter-spacing-2 text-secondary position-relative ps-3 mb-3 fs-6"
+                            style="color: #999;">
+                            <span class="position-absolute start-0 top-50 translate-middle-y rounded-circle"
+                                style="width: 8px; height: 8px; background: #ff3d00;"></span>
+                            History
+                        </p>
+                        <p class="card-text">The Pokémon franchise began in 1996 with the release of Pocket Monsters Red
+                            and Green in Japan. What started as simple Game Boy games has evolved into one of the most
+                            successful entertainment franchises of all time, spanning games, cards, anime, movies, and
+                            merchandise loved by millions around the globe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="fw-bold fs-1 text-white mb-3 text-center">
+            Explore the
+            <span style="
+              background: linear-gradient(90deg, #ff9966, #ff5e62, #5ec25e, #2fbda1, #4fc3dc);
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+              text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+              filter: drop-shadow(0 0 10px rgba(160, 115, 79, 0.5));
+            ">Poké</span>Map
+        </h2>
+
+        <p class="text-white-50 mx-auto fs-5 text-center px-3 px-md-0 mb-4" style="max-width: 800px; line-height: 1.6;">
+            Dive into the official Pokémon world map each region packed with adventures, iconic Pokémon, and legendary
+            tales.
+            Whether you’re revisiting your favorite region or exploring a new one, discover what makes each place truly
+            unforgettable.
+        </p>
+
+        <div class="row pt-4">
+            <div class="col-md-4 mb-4">
+                <div class="card-poke d-flex flex-column bg-dark rounded-4 overflow-hidden shadow-sm">
+                    <div class="overflow-hidden" style="height: 200px;">
+                        <img src="assets/img/kanto.jpg" class="card-img-top h-100 w-100 object-fit-cover"
+                            alt="Kanto Region">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <h5 class="card-title mb-2 fw-bold text-white">Kanto Region</h5>
+                        <p class="card-text text-white-50 small">The region where it all began! Home of Pikachu,
+                            Bulbasaur, and Charmander.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card-poke d-flex flex-column bg-dark rounded-4 overflow-hidden shadow-sm">
+                    <div class="overflow-hidden" style="height: 200px;">
+                        <img src="assets/img/johto.png" class="card-img-top h-100 w-100 object-fit-cover"
+                            alt="Johto Region">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <h5 class="card-title mb-2 fw-bold text-white">Johto Region</h5>
+                        <p class="card-text text-white-50 small">Adventure continues with Chikorita, Cyndaquil, and
+                            Totodile!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card-poke d-flex flex-column bg-dark rounded-4 overflow-hidden shadow-sm">
+                    <div class="overflow-hidden" style="height: 200px;">
+                        <img src="assets/img/Hoenn.png" class="card-img-top h-100 w-100 object-fit-cover"
+                            alt="Hoenn Region">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <h5 class="card-title mb-2 fw-bold text-white">Hoenn Region</h5>
+                        <p class="card-text text-white-50 small">Explore oceans and volcanoes with Treecko, Torchic, and
+                            Mudkip!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pt-4">
+            <div class="col-md-4 mb-4">
+                <div class="card-poke d-flex flex-column bg-dark rounded-4 overflow-hidden shadow-sm">
+                    <div class="overflow-hidden" style="height: 200px;">
+                        <img src="assets/img/sinnoh.jpg" class="card-img-top h-100 w-100 object-fit-cover"
+                            alt="Sinnoh Region">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <h5 class="card-title mb-2 fw-bold text-white">Sinnoh Region</h5>
+                        <p class="card-text text-white-50 small">Home of Piplup, Turtwig, and Chimchar. Snowy mountains
+                            await!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card-poke d-flex flex-column bg-dark rounded-4 overflow-hidden shadow-sm">
+                    <div class="overflow-hidden" style="height: 200px;">
+                        <img src="assets/img/unova.png" class="card-img-top h-100 w-100 object-fit-cover"
+                            alt="Unova Region">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <h5 class="card-title mb-2 fw-bold text-white">Unova Region</h5>
+                        <p class="card-text text-white-50 small">Big cities and new Pokémon like Snivy, Tepig, and
+                            Oshawott!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card-poke d-flex flex-column bg-dark rounded-4 overflow-hidden shadow-sm">
+                    <div class="overflow-hidden" style="height: 200px;">
+                        <img src="assets/img/kalos.png" class="card-img-top h-100 w-100 object-fit-cover"
+                            alt="Kalos Region">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <h5 class="card-title mb-2 fw-bold text-white">Kalos Region</h5>
+                        <p class="card-text text-white-50 small">Meet Froakie, Chespin, and Fennekin while exploring
+                            France-inspired lands!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const pokemonTypes = [
+            { name: 'Normal', color: '#A8A878' },
+            { name: 'Fire', color: '#F08030' },
+            { name: 'Water', color: '#6890F0' },
+            { name: 'Electric', color: '#F8D030' },
+            { name: 'Grass', color: '#78C850' },
+            { name: 'Ice', color: '#98D8D8' },
+            { name: 'Fighting', color: '#C03028' },
+            { name: 'Poison', color: '#A040A0' },
+            { name: 'Ground', color: '#E0C068' },
+            { name: 'Flying', color: '#A890F0' },
+            { name: 'Psychic', color: '#F85888' },
+            { name: 'Bug', color: '#A8B820' },
+            { name: 'Rock', color: '#B8A038' },
+            { name: 'Ghost', color: '#705898' },
+            { name: 'Dragon', color: '#7038F8' },
+            { name: 'Dark', color: '#705848' },
+            { name: 'Steel', color: '#B8B8D0' },
+            { name: 'Fairy', color: '#EE99AC' }
+        ];
+
+        function getTypeColor(typeName) {
+            const typeObject = pokemonTypes.find(type =>
+                type.name.toLowerCase() === typeName.toLowerCase()
+            );
+            return typeObject ? typeObject.color : '#777';
+        }
+
+        const typesContainer = document.getElementById('pokemonTypes');
+        for (let i = 0; i < pokemonTypes.length; i++) {
+            const type = pokemonTypes[i];
+            const typeElement = document.createElement('span');
+            typeElement.className = 'type-badge';
+            typeElement.textContent = type.name;
+            typeElement.style.backgroundColor = type.color;
+            typesContainer.appendChild(typeElement);
+        }
+
+        var cardContainer = document.getElementById("carouselInner");
+        var page = 1;
+
+        const loadPokemon = async () => {
+            var baseline = 1 + ((page - 1) * 100);
+            var pokemonCount = baseline + 99;
+
+            for (var i = baseline; i <= pokemonCount; i++) {
+                const response = await fetch('https://pokeapi.co/api/v2/pokemon/' + i);
+                const pokemon = await response.json();
+
+                const type = pokemon.types[0].type.name;
+                const name = pokemon.name;
+
+                const pokemonImage = pokemon.sprites.other['official-artwork'].front_default || pokemon.sprites.front_default;
+
+                const typeColor = getTypeColor(type);
+
+                const isActive = i === baseline ? 'active' : '';
+
+                cardContainer.innerHTML += `
+        <div class="carousel-item ` + isActive + `">
+            <div class="pokemon wow">
+                <div class="info">
+                    <div class="img-container ">
+                        <img src="` + pokemonImage + `" style="width: 220px; height: auto; max-height: 220px;">
+                    </div>
+                    <h1 class="name" style="font-size: 30px; padding-top: 42px;">` + name + `</h1>
+                    <span class="type-badge" style="background-color: ` + typeColor + `; font-size: 16px;">
+                        ` + type + `
+                    </span>
+                </div>
+            </div>
+        </div>
+    `;
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var myCarousel = document.getElementById('pokemonCarousel');
+            if (myCarousel) {
+                var carousel = new bootstrap.Carousel(myCarousel, {
+                    interval: 3000,
+                    ride: 'carousel',
+                    wrap: true
+                });
+            }
+
+            loadPokemon();
+        });
+    </script>
+</body>
+
+</html>
