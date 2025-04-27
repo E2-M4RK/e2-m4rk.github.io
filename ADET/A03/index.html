@@ -16,36 +16,42 @@
     body {
         font-family: 'Poppins', sans-serif;
     }
+    a.active {
+  background-color: rgba(120, 173, 194, 0.719);
+  border-radius: 5px;
+}
 </style>
 
 <body class="bg-black text-white">
-    <nav class="navbar navbar-expand-lg py-4 px-3">
-        <div class="container-fluid d-flex justify-content-between align-items-center">
-            <a class="navbar-brand fs-3 fw-bold" href="index.html" style="color: #ffcb05;">
-                Poké<span class="text-white">Verse</span>
+    <nav class="navbar navbar-expand-lg" style="background-color: transparent; padding: 16px 0;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"
+                style="color: #fff; font-weight: 700; font-size: 24px; letter-spacing: 2px; background: linear-gradient(90deg, #ff9966, #ff5e62, #5ec25e, #2fbda1, #4fc3dc); background-clip: text; color: transparent; text-shadow: 0 0 10px rgba(255,255,255,0.1);">
+                PokéVerse
             </a>
+    
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 style="background-color: #ffcb05; border: none;">
                 <span class="navbar-toggler-icon"></span>
             </button>
-        </div>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link text-white me-3 fw-medium" href="index.html">HOME</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white me-3 fw-medium" href="poketrivia.html">POKETRIVIA</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white me-3 fw-medium" href="pokegal.html">GALLERY</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white me-3 fw-medium"
-                        href="https://github.com/E2-M4RK/e2-m4rk.github.io">GITHUB</a>
-                </li>
-            </ul>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <div class="d-flex">
+                    <a class="nav-link px-2 active" href="index.html" style="color: rgba(255, 255, 255, 0.8); font-size: 24px;">
+                        <i class="bi bi-house-door-fill"></i>
+                    </a>
+                    <a class="nav-link px-2" href="poketrivia.html" style="color: rgba(255, 255, 255, 0.8); font-size: 24px;">
+                        <i class="bi bi-globe"></i>
+                    </a>
+                    <a class="nav-link px-2" href="pokegal.html" style="color: rgba(255, 255, 255, 0.8); font-size: 24px;">
+                        <i class="bi bi-image-fill"></i>
+                    </a>
+                    <a class="nav-link px-2" href="https://github.com/E2-M4RK/e2-m4rk.github.io" target="_blank"
+                        style="color: rgba(255, 255, 255, 0.8); font-size: 24px;">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 
